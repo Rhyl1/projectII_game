@@ -1,8 +1,9 @@
 body {
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 #gamevenster {
-    width: 100vw;
+    width: 200px;
     height: 400px;
     margin: 0 auto;
     padding: 0;
@@ -14,7 +15,7 @@ body {
     font: bold 14px verdana;
     background-color: yellow;
     text-align: center;
-    color: black;
+    color: #ffffff;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     vertical-align: middle;
