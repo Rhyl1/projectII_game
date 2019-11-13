@@ -1,44 +1,46 @@
-.navbar-default {
-	background-image: none;
-	margin-bottom: 0;
+body {
+    margin-top: 150px;
+}
+#gamevenster {
+    width: 100vw;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+.bubb {
+    position: absolute;
+    width:30px;
+    height: 30px;
+    font: bold 14px verdana;
+    background-color: yellow;
+    text-align: center;
+    color: black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    vertical-align: middle;
+    padding: 5px;
 }
 
-.section-heading, #discipline-selector {
-	display: inline-block;
-	float: none;
-	margin: 0;
+#score {
+    font-size:46px;
+    top: 25px;
+    right: 50px;
+    display: none;
+    text-align:center;
 }
 
-.section-heading {
-	margin-bottom: 50px;
+#start {
+    /* width: 50px;
+    padding: 10px 15px;
+    text-align: center; */
+    font:bold 15px arial;
+    background-color: #dedede;
+    color: #000;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    
 }
 
-#discipline-selector {
-	margin-left: 15px;
-}
-
-.number-box {
-	margin-right: 75px;
-}
-
-.number-box, .fa.fa-gender {
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.fa-gender {
-	margin-right: 10px;
-}
-
-.custom-chart {
-	margin-bottom: 40px;
-}
-
-.section {
-	border-bottom: 1px solid #e6e6e6;
-	padding: 30px 0;
-}
-
-.section-paragraph {
-	line-height: 1.2;
+#start:hover {
+    cursor: pointer;
 }
