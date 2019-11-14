@@ -1,0 +1,58 @@
+
+
+.c-body {
+  /* background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -webkit-linear-gradient(left, #1b1b1b 10px, transparent 10px), -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px; */
+color: white;
+background: grey;
+}
+
+.title {
+    margin: 30px auto;
+    text-align: center;
+    text-shadow: #333333 0 0 20px;
+}
+
+.button {
+    list-style: none;
+    width: 250px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 125px);
+    border: 10x solid #B71C1C;
+    background-color: #f44336;
+    font-size: 24px;
+    text-shadow: #333333 2px 2px px;
+    cursor: pointer;
+
+    box-shadow: insert 0 0 250px rgba(255,  255,    255,    0);
+    outline: 2px solid;
+    outline-color: rgba(255,  255,    255,    6);
+
+}
+
+    .button:hover {
+        box-shadow: insert 0 0 10px  rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, 1);
+        outline-color: rgba(255, 255, 255, 0);
+        outline-offset: 25px;
+        text-shadow: #427388 1px 1px 2px;
+        -webkit-transition: outline 1s, outline-offset 1s, box-shadow 1s, text-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: outline 1s, outline-offset 1s, box-shadow 1s, text-shadow 1s 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+    }
+
+.button--start {
+    top: 150px;
+}
+
+.button--scores {
+    top: 250px;
+}
+
+.button--about {
+    top: 350px;
+}
