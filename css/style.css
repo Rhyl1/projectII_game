@@ -2,12 +2,6 @@ body {
     margin-top: 150px;
     margin-bottom: 150px;
 }
-#gamevenster {
-    width: 200px;
-    height: 400px;
-    margin: 0 auto;
-    padding: 0;
-}
 .bubb {
     position: absolute;
     width:30px;

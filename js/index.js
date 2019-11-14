@@ -1,9 +1,9 @@
 $(document).ready(function() {
 // Getting screen resolutions and positioning the start button
-    var width = screen.width;
-    var height = screen.height;
-    var code = 0;
 
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var code = 0;
 
     // Generating a random color
     function randomColor() {
@@ -27,11 +27,6 @@ $(document).ready(function() {
         setTimeout(genLetter, 1000);
     }
 
-    // $('#start').css({
-    //     "top" : (height/2)+'px',
-    //     "left" : (width/2)+'px'
-    // });
-
     $('#start').click( function() {
         $(this).fadeOut('slow');
         $('#score').show();
@@ -53,4 +48,13 @@ $(document).ready(function() {
         }
         );
     });
+
+    $("body").keydown(function (event)  {
+        if (event.which == 27) {
+             //quits game after pressing esc. button
+            $('#message').fadeIn('slow', function(){
+               $('#message').delay(2*1000).fadeOut();
+               $("body").fadeOut();
+            })}})
+
 });
