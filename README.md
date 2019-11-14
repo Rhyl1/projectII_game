@@ -3,6 +3,9 @@ This game was developed for the Code Institue milstoneproject II.
 
 ###UX
 The layout of the website is minimalistic. The game needs to be played in full screen.
+The user can start the game by clicking the <START> button in the screen.
+After this random letters will appear; the user can score 20 points for each matched letter.
+To stop the game the user can press the <ESC> button. To restart the screen must be refreshed.
 
 Users
 The users of the website include people looking for simple fun and people improving their (blind) typing skills.
@@ -15,7 +18,7 @@ Random generated letters -- in the footer -- These links provide additional cont
 Features Left to Implement
 A loggig of user name and/or user scores.
 A high score list.
-Diffrent levels of difficulty
+A level up function.
 
 Technologies Used
 This project uses:
@@ -39,4 +42,6 @@ Also the html and css code was validated using; https://validator.w3.org.
 ##Deployment
 The pages where deployed by activating the GitHub pages on GitHub. This process makes the website accessible for user via the internet. To make this possible all the page and image file links needed to be adjusted, so they would display the intended content.
 ##Credits for Content & Acknowledgements
-I received inspiration for this project from the Code Institute "Whiskey drop tutorial" and by browsing for the websites of other local coffeeshops.
+All props go to Riva Tamada who got me started on this game, via his free tutorial
+https://www.9lessons.info/2010/12/typing-game-with-jquery.html
+

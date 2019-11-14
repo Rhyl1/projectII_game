@@ -1,11 +1,10 @@
 $(document).ready(function() {
-// Getting screen resolutions and positioning the start button
 
     var width = window.innerWidth;
     var height = window.innerHeight;
     var code = 0;
 
-    // Generating a random color
+    // Generating a random color -- code snippet from Riva Tamada
     function randomColor() {
         var color = '';
         var values = ['a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
@@ -16,7 +15,7 @@ $(document).ready(function() {
         }
         return color;
     }
-    // Generating a random alphabet between A-Z
+    // Generating a random alphabet between A-Z --- code snippet adapted from Riva Tamada
     function genLetter() {
         var color = randomColor();
         var k = Math.floor(Math.random() * ( 90 - 65 + 1 )) + 65;
@@ -33,7 +32,7 @@ $(document).ready(function() {
         genLetter();
     });
 
-    // Dealing KeyEvents and fading out matched bubble
+    // Dealing KeyEvents and fading out matched bubble -- -- code snippet from Riva Tamada
     $(document).keydown( function(event) {
         var keycode = event.keyCode;
         $('.bubb'+keycode).animate(
