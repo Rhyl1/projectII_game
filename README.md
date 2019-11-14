@@ -45,3 +45,10 @@ The pages where deployed by activating the GitHub pages on GitHub. This process 
 All props go to Riva Tamada who got me started on this game, via his free tutorial
 https://www.9lessons.info/2010/12/typing-game-with-jquery.html
 
+Also Anathol for his game turoials
+Anatol Merezhanyi @e1r0nd_crg
+ * https://www.youtube.com/c/AnatolMerezhanyi
+
+CSS# Patterns Gallery is used for background
+https://leaverou.github.io/css3patterns/#cross-dots
+pattern startpage is Upholstry by Nate Eagle.

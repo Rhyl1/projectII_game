@@ -1,12 +1,22 @@
 
-
+/* background code snippet from csspaterns3 gallery */
 .c-body {
-  /* background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -webkit-linear-gradient(left, #1b1b1b 10px, transparent 10px), -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  background-color: #131313;
-  background-size: 20px 20px; */
+ background: 
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+    linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+    linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+background-color: #300;
+background-size: 100px 100px;
+
 color: white;
-background: grey;
+/* background: grey; */
 }
 
 .title {
@@ -55,4 +65,42 @@ background: grey;
 
 .button--about {
     top: 350px;
+}
+
+.bubbel {
+    position: absolute;
+    width:30px;
+    height: 30px;
+    font: bold 14px verdana;
+    background-color: yellow;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.u--visible {
+  margin: 0 auto;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-filter .5s, opacity .5s linear;
+  transition: filter .5s, opacity .5s linear;
+  color: #fff;
+}
+
+.u--blur-fadeout {
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
 }

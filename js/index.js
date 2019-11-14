@@ -57,3 +57,12 @@ $(document).ready(function() {
             })}})
 
 });
+// *********tryout addons
+document.querySelector('#aboutFrame').addEventListener('click', toggleModal);
+document.querySelector('#aboutLnk').addEventListener('click', toggleModal);
+
+function toggleModal() {
+  document.querySelector(`#${this.dataset.hide}`).classList.add('u--blur-fadeout');
+  document.querySelector(`#${this.dataset.show}`).classList.remove('u--blur-fadeout');
+}
+
