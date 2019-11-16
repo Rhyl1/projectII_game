@@ -1,39 +1,42 @@
 $(document).ready(function() {
 
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    var code = 0;
+    // window.resizeBy(-200, -200);
 
+    var width = document.documentElement.clientWidth - 400;
+    var height = document.documentElement.clientHeight - 600;
+    var code = 0;
+console.log (height);
     // Generating a random color -- code snippet from Riva Tamada
     function randomColor() {
-        var color = '';
-        var values = ['a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-        for (c = 0; c < 6; c++)
+        var kleur = '';
+        var waarden = ['a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+        for (i = 0; i < 6; i++)
         {
-        no = Math.floor(Math.random() * 15);
-        color += values[no];
+        nummer = Math.floor(Math.random() * 15);
+        kleur += waarden[nummer];
         }
-        return color;
+        return kleur;
     }
     // Generating a random alphabet between A-Z --- code snippet adapted from Riva Tamada
     function genLetter() {
-        var color = randomColor();
-        var k = Math.floor(Math.random() * ( 90 - 65 + 1 )) + 65;
-        var ch = String.fromCharCode(k);
+        var kleur = randomColor();
+        var hoofdletters = Math.floor(Math.random() * ( 90 - 65 + 1 )) + 65;
+        var schermletter = String.fromCharCode(hoofdletters);
         var top = Math.floor(Math.random() * height );
         var left = Math.floor(Math.random() * width );
-        $('body').append('<span class="bubb bubb'+ k +'" style="left: '+ left +'px'+'; top: '+ top +'px'+'; background-color:'+'#'+ color +'">'+ ch +'</span>');
+        $('body').append('<span class="bubb bubb'+ hoofdletters +'" style="left: '+ left +'px'+'; top: '+ top +'px'+'; background-color:'+'#'+ kleur +'">'+ schermletter +'</span>');
         setTimeout(genLetter, 1000);
     }
 
-    $('#start').click( function() {
-        $(this).fadeOut('slow');
-        $('#score').show();
-        genLetter();
-    });
+    // $('#startLnk').click( function() {
+    //     $(this).fadeOut('slow');
+    //     $('#score').show();
+
+    //     genLetter();
+    // });
 
     // Dealing KeyEvents and fading out matched bubble -- -- code snippet from Riva Tamada
-    $(document).keydown( function(event) {
+    $('body').keydown( function(event) {
         var keycode = event.keyCode;
         $('.bubb'+keycode).animate(
         {
@@ -60,9 +63,16 @@ $(document).ready(function() {
 // *********tryout addons
 document.querySelector('#aboutFrame').addEventListener('click', toggleModal);
 document.querySelector('#aboutLnk').addEventListener('click', toggleModal);
+document.querySelector('#startLnk').addEventListener('click', startSpel);
 
 function toggleModal() {
-  document.querySelector(`#${this.dataset.hide}`).classList.add('u--blur-fadeout');
-  document.querySelector(`#${this.dataset.show}`).classList.remove('u--blur-fadeout');
+  $(`#aboutFrame`).toggleClass('u--blur-fadeout');
+    $(`#knoppensectie`).toggleClass('u--blur-fadeout');
 }
 
+function startSpel() {
+    $(`#knoppensectie`).toggleClass('u--blur-fadeout');
+    $('#score').show();
+    // this.call(genLetter());
+}
+    
