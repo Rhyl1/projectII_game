@@ -5,6 +5,7 @@ $(document).ready(function() {
     var width = document.documentElement.clientWidth - 400;
     var height = document.documentElement.clientHeight - 600;
     var code = 0;
+    // var maakletter = genLetter();
 console.log (height);
     // Generating a random color -- code snippet from Riva Tamada
     function randomColor() {
@@ -36,7 +37,7 @@ console.log (height);
     // });
 
     // Dealing KeyEvents and fading out matched bubble -- -- code snippet from Riva Tamada
-    $('body').keydown( function(event) {
+    $('#startLnk').keydown( function(event) {
         var keycode = event.keyCode;
         $('.bubb'+keycode).animate(
         {
@@ -49,15 +50,15 @@ console.log (height);
         $(this).remove();
         }
         );
-    });
+   
 
-    $("body").keydown(function (event)  {
-        if (event.which == 27) {
-             //quits game after pressing esc. button
-            $('#message').fadeIn('slow', function(){
-               $('#message').delay(2*1000).fadeOut();
-               $("body").fadeOut();
-            })}})
+    // $("body").keydown(function (event)  {
+    //     if (event.which == 27) {
+    //          //quits game after pressing esc. button
+    //         $('#message').fadeIn('slow', function(){
+    //            $('#message').delay(2*1000).fadeOut();
+    //            $("body").fadeOut();
+    //         })}})
 
 });
 // *********tryout addons
@@ -68,11 +69,13 @@ document.querySelector('#startLnk').addEventListener('click', startSpel);
 function toggleModal() {
   $(`#aboutFrame`).toggleClass('u--blur-fadeout');
     $(`#knoppensectie`).toggleClass('u--blur-fadeout');
-}
+};
 
 function startSpel() {
     $(`#knoppensectie`).toggleClass('u--blur-fadeout');
     $('#score').show();
-    // this.call(genLetter());
-}
+genLetter();
+};
+
+ });
     
