@@ -83,6 +83,7 @@ color: white;
     -moz-border-radius: 20px;
     vertical-align: middle;
     padding: 5px;
+    border-style: ridge;
 }
 
 .u--visible {
