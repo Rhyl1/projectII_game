@@ -5,60 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style2.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
     <title>Type Game ProjectII</title>
 </head>
 <body class="c-body">
     <div class="container-fluid text-center">
         <div class="row">
-            <div class="col">
-                <a href="index_copy.html">testgame</a>
+            <div class="col" id="score">0</div>
+             </div>
+        <div class="row">
+            <div class="col" id="knoppensectie">
                 <h1 class="title">Type Game</h1>
                 <ul>
-                <li class="start button button--start" id="startLnk" data-show="startBox" data-hide="menuBox">Start</li>
-                <li class="score button button--scores" id="scoresLnk" data-show="scoresBox" data-hide="menuBox">Scores</li>
-                <li class="button button--about" id="aboutLnk" data-show="aboutBox" data-hide="menuBox">About</li>
+                <li class="button button--start" id="startLnk">Start</li>
+                <li class="button button--about" id="aboutLnk">About</li>
                 </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col about u--visible u--blur-fadeout" id="aboutFrame" data-show="menuBox" data-hide="aboutBox">
-                <h1 class="title">How to play this</h1>
-                <div class="popup button--teal button--about">
-                <p>Type Game</p>
-                <p class="about__text">After clicking the start button, random letters will be generated. Type the corresponding letter to gain points.</p>
-                <p class="about__text"><br />
-                <div class="bubbel" style="left:20px; background-color:#38a444">G</div>
-                <div class="bubbel" style="left:100px; background-color:#38a444">G</div>
-                <div class="bubbel" style="left:180px; background-color:#38a444">G</div>
-                <div class="bubbel" style="left:250px; background-color:#38a444">G</div>
-                    <!-- <div class="chip chip--round chip--stripes chip--clockwise u--selected" style="left:20px"></div>
-                    <div class="chip chip--square chip--tablecloth chip--c-clockwise" style="left:100px"></div>
-                    <div class="chip chip--square chip--shippo chip--clockwise" style="left:180px"></div>
-                    <div class="chip chip--round chip--stripes chip--clockwise u--selected" style="left:250px"></div>
-                    <div class="chip chip--round chip--stripes chip--c-clockwise" style="left:310px"></div> -->
+            <div class="col about u--visible u--blur-fadeout" id="aboutFrame">
+                <h1 class="title">How to play</h1>
+                <p class="title">The Type Game</p>
+                <p>After clicking the start button, random letters will be generated. Type the corresponding letter to gain points <br> and remove the letter from the screen</p>
+                <p><br />
+                <div class="bubb" style="left:90px; top:210px; background-color:#6eca1e">T</div>
+                <div class="bubb" style="left:220px; top:223px; background-color:#e91f6a">Y</div>
+                <div class="bubb" style="left:310px; top:325px; background-color:#5bc2c8">P</div>
+                <div class="bubb" style="left:390px; top:233px; background-color:#833324">E</div>
+                <div class="bubb" style="left:570px; top:210px; background-color:#38a444">G</div>
+                <div class="bubb" style="left:610px; top:223px; background-color:#4573bb">A</div>
+                <div class="bubb" style="left:700px; top:325px; background-color:#1c1196">M</div>
+                <div class="bubb" style="left:790px; top:233px; background-color:#5c3ff4">E</div>
+
                 <br /></p>
                 <p>(click here to close)</p>
                 </div>
+                <div class="row">
+                    <div class="col" id="message" style="display:none;">You have quit the game. Refresh the page to start again.</div>
+                    </div>
+                </div>
+  </div>
             </div>
         </div>
-    </div>
-            <!-- <div class="col" id="score">0</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button id="start">Start</button>
-            </div>
-        </div>
-        <div class="row">
-            <div id="message" style="display:none;">You have quit the game. Refresh the page to start again.</div>
-        </div>
-    </div> -->
-    
+    </div>  
 </body>
-
-
 <script type="text/javascript" src="./js/index.js"></script>
 </html>

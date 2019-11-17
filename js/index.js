@@ -1,5 +1,5 @@
 $(document).ready(function() {
-// Code below sets game playing area full screen - heigt and with pixels to keep the generates letters from te edges.
+// Code below sets game playing area full screen - heigt and with pixels to keep the generates letters from te edges
     var width = document.documentElement.clientWidth - 400;
     var height = document.documentElement.clientHeight - 600;
     var score = 0;
