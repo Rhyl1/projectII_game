@@ -1,13 +1,10 @@
 $(document).ready(function() {
-
-    // window.resizeBy(-200, -200);
-
+// Code below sets game playing area full screen - heigt and with pixels to keep the generates letters from te edges.
     var width = document.documentElement.clientWidth - 400;
     var height = document.documentElement.clientHeight - 600;
-    var code = 0;
-    // var maakletter = genLetter();
-console.log (height);
-    // Generating a random color -- code snippet from Riva Tamada
+    var score = 0;
+
+    // Generating a random color -- original code snippet adapted from Riva Tamada
     function randomColor() {
         var kleur = '';
         var waarden = ['a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
@@ -18,7 +15,7 @@ console.log (height);
         }
         return kleur;
     }
-    // Generating a random alphabet between A-Z --- code snippet adapted from Riva Tamada
+    // Generating a random alphabet between A-Z --- original code snippet adapted from Riva Tamada
     function genLetter() {
         var kleur = randomColor();
         var hoofdletters = Math.floor(Math.random() * ( 90 - 65 + 1 )) + 65;
@@ -29,15 +26,8 @@ console.log (height);
         setTimeout(genLetter, 1000);
     }
 
-    // $('#startLnk').click( function() {
-    //     $(this).fadeOut('slow');
-    //     $('#score').show();
-
-    //     genLetter();
-    // });
-
     // Dealing KeyEvents and fading out matched bubble -- -- code snippet from Riva Tamada
-    $('#startLnk').keydown( function(event) {
+    $('body').keydown( function(event) {
         var keycode = event.keyCode;
         $('.bubb'+keycode).animate(
         {
@@ -45,13 +35,12 @@ console.log (height);
         }, 'slow');
 
     $('.bubb'+keycode).fadeOut('slow').hide( 'slow', function() {
-        code += 20;
-        $('#score').html(code);
+        score += 20;
+        $('#score').html(score);
         $(this).remove();
         }
         );
    
-
     // $("body").keydown(function (event)  {
     //     if (event.which == 27) {
     //          //quits game after pressing esc. button
@@ -61,7 +50,7 @@ console.log (height);
     //         })}})
 
 });
-// *********tryout addons
+
 document.querySelector('#aboutFrame').addEventListener('click', toggleModal);
 document.querySelector('#aboutLnk').addEventListener('click', toggleModal);
 document.querySelector('#startLnk').addEventListener('click', startSpel);
