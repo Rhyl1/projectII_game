@@ -22,7 +22,7 @@ $(document).ready(function() {
         var schermletter = String.fromCharCode(hoofdletters);
         var top = Math.floor(Math.random() * height );
         var left = Math.floor(Math.random() * width );
-        $('body').append('<span class="bubb bubb'+ hoofdletters +'" style="left: '+ left +'px'+'; top: '+ top +'px'+'; background-color:'+'#'+ kleur +'">'+ schermletter +'</span>');
+        $('#speelveld').append('<span class="bubb bubb'+ hoofdletters +'" style="left: '+ left +'px'+'; top: '+ top +'px'+'; background-color:'+'#'+ kleur +'">'+ schermletter +'</span>');
         setTimeout(genLetter, 1000);
     }
 
@@ -40,14 +40,6 @@ $(document).ready(function() {
         $(this).remove();
         }
         );
-   
-    // $("body").keydown(function (event)  {
-    //     if (event.which == 27) {
-    //          //quits game after pressing esc. button
-    //         $('#message').fadeIn('slow', function(){
-    //            $('#message').delay(2*1000).fadeOut();
-    //            $("body").fadeOut();
-    //         })}})
 
 });
 
@@ -60,11 +52,27 @@ function toggleModal() {
     $(`#knoppensectie`).toggleClass('u--blur-fadeout');
 };
 
+function terugBijaf() {
+    $(`#knoppensectie`).toggleClass('u--blur-fadeout');
+};
+
 function startSpel() {
     $(`#knoppensectie`).toggleClass('u--blur-fadeout');
     $('#score').show();
 genLetter();
 };
+
+//quits game after pressing esc. button and reloads the page again.
+    $("body").keydown(function (event)  {
+        if (event.which == 27) {
+            $("#speelveld").fadeOut();
+            $('#score').remove();
+            $('#message').fadeIn(8000, function(){
+            $('#message').delay(20).fadeOut();
+            
+            terugBijaf();
+            location.reload();
+            })}})
 
  });
     
