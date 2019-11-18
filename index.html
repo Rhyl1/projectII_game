@@ -6,62 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <title>Type Game ProjectII</title>
 </head>
 <body class="c-body">
     <div class="container-fluid text-center">
+    <!-- This row contains the score counter -->
         <div class="row">
-            <div class="col" id="score">0</div>
-             </div>
+            <div class="col" id="score">0
+            </div>
+        </div>
+    <!-- This row contains the menu buttons-->
         <div class="row">
             <div class="col" id="knoppensectie">
                 <h1 class="title">Type Game</h1>
                 <ul>
-                <li class="button button--start" id="startLnk">Start</li>
-                <li class="button button--about" id="aboutLnk">About</li>
+                    <li class="button button--start" id="startLnk">Start</li>
+                    <li class="button button--about" id="aboutLnk">About</li>
                 </ul>
             </div>
         </div>
+    <!-- This row contains the About section content -->
         <div class="row">
             <div class="col about u--visible u--blur-fadeout" id="aboutFrame">
                 <h1 class="title">How to play</h1>
                 <p class="title">The Type Game</p>
-                <p>After clicking the start button, random letters will be generated on the screen 
-                <br> Type the corresponding letter to gain points 
-                <br> and remove the letter from the screen.
-                <br> Press the <ESC> button to quit the game.
+                <p>After clicking the start button, random letters will be generated on the screen.
+                    <br> Type the corresponding letter to gain points.
+                    <br> and remove the letter from the screen.
+                    <br> Press the ESC button to quit the game.
                 </p>
-                <p><br />
+                <p><br>
                 
-                <div class="bubb about" style="left:50px; top:410px; background-color:#6eca1e">*</div>
-                <div class="bubb about" style="left:90px; top:423px; background-color:#e91f6a">*</div>
-                <div class="bubb about" style="left:190px; top:410px; background-color:#6eca1e">T</div>
-                <div class="bubb about" style="left:320px; top:423px; background-color:#e91f6a">Y</div>
-                <div class="bubb about" style="left:410px; top:525px; background-color:#5bc2c8">P</div>
-                <div class="bubb about" style="left:490px; top:433px; background-color:#833324">E</div>
-                <div class="bubb about" style="left:670px; top:410px; background-color:#38a444">G</div>
-                <div class="bubb about" style="left:710px; top:500px; background-color:#4573bb">A</div>
-                <div class="bubb about" style="left:800px; top:525px; background-color:#1c1196">M</div>
-                <div class="bubb about" style="left:890px; top:633px; background-color:#5c3ff4">E</div>
-                <div class="bubb about" style="left:910px; top:410px; background-color:#6eca1e">*</div>
-                <div class="bubb about" style="left:950px; top:423px; background-color:#e91f6a">*</div>
+                <div class="bolletje about" style="left:50px; top:410px; background-color:#6eca1e">*</div>
+                <div class="bolletje about" style="left:90px; top:423px; background-color:#e91f6a">*</div>
+                <div class="bolletje about" style="left:190px; top:410px; background-color:#6eca1e">T</div>
+                <div class="bolletje about" style="left:320px; top:423px; background-color:#e91f6a">Y</div>
+                <div class="bolletje about" style="left:410px; top:525px; background-color:#5bc2c8">P</div>
+                <div class="bolletje about" style="left:490px; top:433px; background-color:#833324">E</div>
+                <div class="bolletje about" style="left:670px; top:410px; background-color:#38a444">G</div>
+                <div class="bolletje about" style="left:710px; top:500px; background-color:#4573bb">A</div>
+                <div class="bolletje about" style="left:800px; top:525px; background-color:#1c1196">M</div>
+                <div class="bolletje about" style="left:890px; top:633px; background-color:#5c3ff4">E</div>
+                <div class="bolletje about" style="left:910px; top:410px; background-color:#6eca1e">*</div>
+                <div class="bolletje about" style="left:950px; top:423px; background-color:#e91f6a">*</div>
+                <div class="bolletje about" style="left:979px; top:310px; background-color:#6eca1e">*</div>
+                <div class="bolletje about" style="left:990px; top:405px; background-color:#e91f6a">*</div>
 
-                <br /></p>
-                <p>(click here to close)</p>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col" id="message">You have quit the game. <hr> Thank you for playing!
-                        </div>
-                        <div class="col" id="speelveld">
-                        </div>
-                    </div>
-                </div>
-  </div>
+                <br>
+                </p>
+                <p>(click here to close this screen and return to menu)</p>
             </div>
         </div>
-    </div>  
+    </div>
+    <div class="container-fluid">
+    <!-- This row contains the screen message that appears after quitting the game. -->
+        <div class="row">
+            <div class="col" id="message">You have quit the game. 
+                <hr class="block-divider"> Thank you for playing!
+            </div>
+            <div class="col" id="speelveld">
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
 </body>
-<script type="text/javascript" src="./js/index.js"></script>
 </html>

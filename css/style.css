@@ -1,28 +1,36 @@
 
 /* background code snippet from csspaterns3 gallery */
 .c-body {
- background: 
-    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
-    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
-    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
-    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
-    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
-    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
-    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
-    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
-    linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
-    linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
-background-color: #300;
-background-size: 100px 100px;
+    background: 
+        radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+        radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+        radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+        radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+        radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+        radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+        radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+        radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+        linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+        linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+    background-color: #300;
+    background-size: 100px 100px;
 
-color: white;
+    color: white;
 }
-
+/* Element and button styling */
 .title {
     margin: 30px auto;
     text-align: center;
-    text-shadow: #333333 0 0 20px;
+    text-shadow: #333333 2px 2px 10px;
     color: #fafafa;
+}
+
+.block-divider {
+    width: 75px;
+    height: 5px;
+    border: 0;
+    background-color: #fafafa;
+    z-index: 3;
 }
 
 .button {
@@ -33,16 +41,15 @@ color: white;
     text-align: center;
     position: absolute;
     left: calc(50% - 125px);
-    border: 10x solid #B71C1C;
+    border: 1px solid #B71C1C;
     background-color: #f44336;
     font-size: 24px;
-    text-shadow: #333333 2px 2px px;
+    text-shadow: #333333 2px 2px 10px;
     cursor: pointer;
 
     box-shadow: insert 0 0 250px rgba(255,  255,    255,    0);
     outline: 2px solid;
     outline-color: rgba(255,  255,    255,    6);
-
 }
 
     .button:hover {
@@ -52,8 +59,15 @@ color: white;
         text-shadow: #427388 1px 1px 2px;
         -webkit-transition: outline 1s, outline-offset 1s, box-shadow 1s, text-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
         transition: outline 1s, outline-offset 1s, box-shadow 1s, text-shadow 1s 1s cubic-bezier(0.19, 1, 0.22, 1);
-
     }
+
+.button--start {
+    top: 150px;
+}
+
+.button--about {
+    top: 250px;
+}
 
 #score {
     font-size:46px;
@@ -63,15 +77,12 @@ color: white;
     text-align:right;
 }
 
-.button--start {
-    top: 150px;
-}
-.button--about {
-    top: 250px;
+#message {
+    display: none;
+    text-align: center;
 }
 
-
-.bubb {
+.bolletje {
     position: absolute;
     width:30px;
     height: 30px;
@@ -85,7 +96,7 @@ color: white;
     padding: 5px;
     border-style: ridge;
 }
-
+/* classes for visibility & style menu buttons */
 .u--visible {
   margin: 0 auto;
   width: 100%;
@@ -108,9 +119,4 @@ color: white;
   visibility: hidden;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
-}
-
-#message {
-    display: none;
-    text-align: center;
 }

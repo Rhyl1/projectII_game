@@ -4,7 +4,7 @@ $(document).ready(function() {
     var height = document.documentElement.clientHeight - 600;
     var score = 0;
 
-    // Generating a random color -- original code snippet adapted from Riva Tamada
+    // Generating a random color for the letterbubbels -- original code snippet adapted from Riva Tamada
     function randomColor() {
         var kleur = '';
         var waarden = ['a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
@@ -14,27 +14,27 @@ $(document).ready(function() {
         kleur += waarden[nummer];
         }
         return kleur;
-    }
-    // Generating a random alphabet between A-Z --- original code snippet adapted from Riva Tamada
+        }
+    // Generating a random alphabet letter between A-Z --- original code snippet adapted from Riva Tamada
     function genLetter() {
         var kleur = randomColor();
         var hoofdletters = Math.floor(Math.random() * ( 90 - 65 + 1 )) + 65;
         var schermletter = String.fromCharCode(hoofdletters);
         var top = Math.floor(Math.random() * height );
         var left = Math.floor(Math.random() * width );
-        $('#speelveld').append('<span class="bubb bubb'+ hoofdletters +'" style="left: '+ left +'px'+'; top: '+ top +'px'+'; background-color:'+'#'+ kleur +'">'+ schermletter +'</span>');
+        $('#speelveld').append('<span class="bolletje bolletje'+ hoofdletters +'" style="left: '+ left +'px'+'; top: '+ top +'px'+'; background-color:'+'#'+ kleur +'">'+ schermletter +'</span>');
         setTimeout(genLetter, 1000);
-    }
+        }
 
-    // Dealing KeyEvents and fading out matched bubble -- -- code snippet from Riva Tamada
+    // Dealing with KeyEvents while playing and fading out matched bubble
     $('body').keydown( function(event) {
         var keycode = event.keyCode;
-        $('.bubb'+keycode).animate(
+        $('.bolletje'+keycode).animate(
         {
         "top" : height+"px", "opacity" : 0
         }, 'slow');
 
-    $('.bubb'+keycode).fadeOut('slow').hide( 'slow', function() {
+    $('.bolletje'+keycode).fadeOut('slow').hide( 'slow', function() {
         score += 20;
         $('#score').html(score);
         $(this).remove();
@@ -43,46 +43,49 @@ $(document).ready(function() {
 
 });
 
-document.querySelector('#aboutFrame').addEventListener('click', toggleModal);
-document.querySelector('#aboutLnk').addEventListener('click', toggleAbout);
-document.querySelector('#startLnk').addEventListener('click', startSpel);
+    // Dealing with KeyEvents while pressing start menu buttons
 
-function toggleModal() {
-  $(`#aboutFrame`).toggleClass('u--blur-fadeout');
+    document.querySelector('#aboutFrame').addEventListener('click', toggleModal);
+    document.querySelector('#aboutLnk').addEventListener('click', toggleAbout);
+    document.querySelector('#startLnk').addEventListener('click', startSpel);
+
+    function toggleModal() {
+    $(`#aboutFrame`).toggleClass('u--blur-fadeout');
     $(`#knoppensectie`).toggleClass('u--blur-fadeout');
-};
+    };
 
-function toggleAbout() {
-  $(`#aboutFrame`).toggleClass('u--blur-fadeout');
+    // Dealing with KeyEvents while pressing the About menu buttons
+    function toggleAbout() {
+    $(`#aboutFrame`).toggleClass('u--blur-fadeout');
     $(`#knoppensectie`).toggleClass('u--blur-fadeout');
-
     $('.about').each(function(i) {
-    // 'i' stands for index of each element
-    $(this).hide().delay(i * 3500).fadeIn(1500);
-});
-};
+        // 'i' stands for index of each element
+        $(this).hide().delay(i * 1500).fadeIn(1500);
+    });
+    };
 
-function terugBijaf() {
-    $(`#knoppensectie`).toggleClass('u--blur-fadeout');
-};
+    // Function made for making menu visible again
+    function terugBijaf() {
+        $(`#knoppensectie`).toggleClass('u--blur-fadeout');
+    };
+    // Function made for starting of the game after pushing start button
+    function startSpel() {
+        $(`#knoppensectie`).toggleClass('u--blur-fadeout');
+        $('#score').show();
+        genLetter();
+    };
 
-function startSpel() {
-    $(`#knoppensectie`).toggleClass('u--blur-fadeout');
-    $('#score').show();
-genLetter();
-};
-
-//quits game after pressing esc. button and reloads the page again.
-    $("body").keydown(function (event)  {
-        if (event.which == 27) {
-            $("#speelveld").fadeOut();
-            $('#score').remove();
-            $('#message').fadeIn(8000, function(){
-            $('#message').delay(20).fadeOut();
-            
-            terugBijaf();
-            location.reload();
-            })}})
+    //quits game after pressing esc. button and reloads the page again.
+        $("body").keydown(function (event)  {
+            if (event.which == 27) {
+                $("#speelveld").fadeOut();
+                $('#score').remove();
+                $('#message').fadeIn(4000, function(){
+                $('#message').delay(20).fadeOut();
+                
+                terugBijaf();
+                location.reload();
+                })}})
 
  });
     
