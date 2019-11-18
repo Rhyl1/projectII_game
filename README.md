@@ -8,7 +8,7 @@ After this random letters will appear; the user can score 20 points for each mat
 To stop the game the user can press the <ESC> button. After stopping the game the START menu will re-appear. 
 The About button in the start menu links to an ABOUT info screen, explaining the working of the game.
 <![alt](https://github.com/Rhyl1/projectII_game/blob/4b7e8865d7b586ac6ac11cce08ac2036256cbf0b/img/startscrn.png)>
-- See following link for wireframes: 
+- See following link for wireframes (included in the root structure img folder): 
 (https://github.com/Rhyl1/projectII_game/blob/a336cc4f5f47e2d04dbcb2eeea74ff36ec1dabff/img/Wireframe_typegame.pdf)
 
 #### Users
