@@ -7,7 +7,7 @@ Start the game by clicking the <START> button in the screen.
 After this random letters will appear; the user can score 20 points for each matched letter.
 To stop the game the user can press the <ESC> button. After stopping the game the START menu will re-appear. 
 The About button in the start menu links to an ABOUT info screen, explaining the working of the game.
-<![alt](https://github.com/Rhyl1/projectII_game/blob/9c5a1bbc6dc363d1dcddc3e267ae96170e7c2bfe/img/startscrn.png)>
+<![alt](https://github.com/Rhyl1/projectII_game/blob/4b7e8865d7b586ac6ac11cce08ac2036256cbf0b/img/startscrn.png)>
 
 #### Users
 The users of the website include people looking for simple fun and people improving their (blind) typing skills.
