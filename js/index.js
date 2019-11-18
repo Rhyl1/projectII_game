@@ -44,12 +44,22 @@ $(document).ready(function() {
 });
 
 document.querySelector('#aboutFrame').addEventListener('click', toggleModal);
-document.querySelector('#aboutLnk').addEventListener('click', toggleModal);
+document.querySelector('#aboutLnk').addEventListener('click', toggleAbout);
 document.querySelector('#startLnk').addEventListener('click', startSpel);
 
 function toggleModal() {
   $(`#aboutFrame`).toggleClass('u--blur-fadeout');
     $(`#knoppensectie`).toggleClass('u--blur-fadeout');
+};
+
+function toggleAbout() {
+  $(`#aboutFrame`).toggleClass('u--blur-fadeout');
+    $(`#knoppensectie`).toggleClass('u--blur-fadeout');
+
+    $('.about').each(function(i) {
+    // 'i' stands for index of each element
+    $(this).hide().delay(i * 3500).fadeIn(1500);
+});
 };
 
 function terugBijaf() {

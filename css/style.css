@@ -109,3 +109,8 @@ color: white;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
 }
+
+#message {
+    display: none;
+    text-align: center;
+}
